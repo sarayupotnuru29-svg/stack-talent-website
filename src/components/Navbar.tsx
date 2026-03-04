@@ -51,18 +51,18 @@ const Navbar = () => {
               key={link.path}
               to={link.path}
               className={`text-sm font-medium transition-colors hover:text-primary ${
-                location.pathname === link.path ? "text-primary" : "text-muted-foreground"
+                location.pathname === link.path
+                  ? link.path === "/contact"
+                    ? "px-5 py-2.5 rounded-lg bg-primary text-primary-foreground"
+                    : "text-primary"
+                  : link.path === "/contact"
+                    ? "px-5 py-2.5 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/25"
+                    : "text-muted-foreground"
               }`}
             >
               {link.name}
             </Link>
           ))}
-          <Link
-            to="/careers"
-            className="px-5 py-2.5 rounded-lg bg-primary text-primary-foreground text-sm font-semibold hover:bg-primary/90 transition-all hover:shadow-lg hover:shadow-primary/25"
-          >
-            Submit Resume
-          </Link>
         </div>
 
         {/* Mobile Toggle */}
@@ -96,12 +96,6 @@ const Navbar = () => {
                   {link.name}
                 </Link>
               ))}
-              <Link
-                to="/careers"
-                className="mt-2 px-5 py-3 rounded-lg bg-primary text-primary-foreground text-sm font-semibold text-center"
-              >
-                Submit Resume
-              </Link>
             </div>
           </motion.div>
         )}

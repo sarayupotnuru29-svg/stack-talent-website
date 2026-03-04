@@ -13,6 +13,10 @@ const skillOptions = [
   "DevOps", ".NET", "SQL", "Data Engineering", "Machine Learning", "Salesforce", "SAP",
 ];
 
+const serviceOptions = [
+  "IT Staffing", "Recruiting", "Software Development", "Web Applications", "Cloud Integration",
+];
+
 const experienceOptions = ["0-1 Years", "1-3 Years", "3-5 Years", "5-8 Years", "8-10 Years", "10+ Years"];
 const authOptions = ["US Citizen", "Green Card", "H1B", "OPT/CPT", "TN Visa", "Other"];
 
@@ -120,6 +124,15 @@ const CandidateForm = () => {
                     {authOptions.map((o) => <option key={o} value={o}>{o}</option>)}
                   </select>
                 </div>
+              </div>
+
+              {/* Service Interested */}
+              <div>
+                <label className="block text-sm font-medium text-foreground mb-2">Service Interested *</label>
+                <select required className="w-full px-4 py-3 rounded-lg bg-muted border border-border text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all">
+                  <option value="">Select a service</option>
+                  {serviceOptions.map((o) => <option key={o} value={o}>{o}</option>)}
+                </select>
               </div>
 
               {/* Resume Upload */}
