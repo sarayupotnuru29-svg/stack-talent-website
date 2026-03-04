@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Users, Search, Code, Globe, Cloud, ArrowRight } from "lucide-react";
-import heroIllustration from "@/assets/hero-illustration.png";
+import logo from "@/assets/logo.jpeg";
 import staffingImg from "@/assets/staffing-illustration.png";
 import softwareImg from "@/assets/software-illustration.png";
 import cloudImg from "@/assets/cloud-illustration.png";
@@ -30,8 +30,8 @@ const Index = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center bg-gradient-hero overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <img src={heroIllustration} alt="" className="w-full h-full object-cover" aria-hidden="true" />
+        <div className="absolute inset-0 flex items-center justify-center opacity-10">
+          <img src={logo} alt="" className="w-[600px] h-[600px] object-contain" aria-hidden="true" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/30 to-background" />
 
